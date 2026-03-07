@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\school\\game415-repo\\gam415_project\\source\\gam415_project\\gam415_project.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\x64\\gam415_projecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gam415_project\\definitions.gam415_project.h",
+            "d:\\school\\game415-repo\\gam415_project\\source\\gam415_project\\gam415_project.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
