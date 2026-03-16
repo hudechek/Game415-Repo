@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\unrealeditor\\inc\\gam415_project\\uht\\cc_dmi_cube.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\x64\\gam415_projecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gam415_project\\definitions.gam415_project.h",
+            "d:\\school\\game415-repo\\gam415_project\\source\\gam415_project\\cc_dmi_cube.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\unrealeditor\\inc\\gam415_project\\uht\\cc_dmi_cube.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

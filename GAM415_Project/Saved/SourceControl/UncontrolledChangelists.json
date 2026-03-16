@@ -1,0 +1,28 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/M_Base_Material.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/CBM_MAT_RedGreenShit.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/2J/R4MRTH8FEAO7ML1BCJFIZ2.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/DI/1JZHHCOBVQ2F5XRUWSES1X.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/6/AJ/2XZ3RUK0LFB63FVNQE7P5R.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/DMI_MAT.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/BP_DMI_Cube.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/MT/C83Q22E9BW747ZX1V2TPXH.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/DMI_MAT_Inst.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/Mat_Splatter.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/splatter.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/splatter1.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/NewMaterial.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/FirstPerson/Blueprints/BP_FirstPersonProjectile.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/MAT_ProjectileMaterial.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/MAT_ProjectileMaterial_Inst.uasset",
+				"D:/School/Game415-Repo/GAM415_Project/Content/Materials/DMI_AMT.uasset"
+			]
+		}
+	]
+}

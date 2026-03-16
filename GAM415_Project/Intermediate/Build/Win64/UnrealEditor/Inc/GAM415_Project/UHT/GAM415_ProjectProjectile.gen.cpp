@@ -11,12 +11,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGAM415_ProjectProjectile() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UMaterial_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 GAM415_PROJECT_API UClass* Z_Construct_UClass_AGAM415_ProjectProjectile();
 GAM415_PROJECT_API UClass* Z_Construct_UClass_AGAM415_ProjectProjectile_NoRegister();
@@ -144,9 +149,63 @@ struct Z_Construct_UClass_AGAM415_ProjectProjectile_Statics
 		{ "ToolTip", "Projectile movement component" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallMesh_MetaData[] = {
+		{ "Category", "Projectile" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//static Mesh\n" },
+#endif
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "GAM415_ProjectProjectile.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "static Mesh" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DecalBaseMat_MetaData[] = {
+		{ "Category", "Projectile" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Decal to be spawned during on hit\n" },
+#endif
+		{ "ModuleRelativePath", "GAM415_ProjectProjectile.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Decal to be spawned during on hit" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RandColor_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//RGBA color variable for random color value storage called RandColor\n" },
+#endif
+		{ "ModuleRelativePath", "GAM415_ProjectProjectile.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "RGBA color variable for random color value storage called RandColor" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileMaterial_MetaData[] = {
+		{ "Category", "Projectile" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//the material set to the ball by defualt\n" },
+#endif
+		{ "ModuleRelativePath", "GAM415_ProjectProjectile.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "the material set to the ball by defualt" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DmiMat_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//dynamic mesh to be set at spawn\n" },
+#endif
+		{ "ModuleRelativePath", "GAM415_ProjectProjectile.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "dynamic mesh to be set at spawn" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CollisionComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BallMesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DecalBaseMat;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_RandColor;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMaterial;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DmiMat;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -160,9 +219,19 @@ struct Z_Construct_UClass_AGAM415_ProjectProjectile_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_CollisionComp = { "CollisionComp", nullptr, (EPropertyFlags)0x00400000000b0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, CollisionComp), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionComp_MetaData), NewProp_CollisionComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMovement_MetaData), NewProp_ProjectileMovement_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_BallMesh = { "BallMesh", nullptr, (EPropertyFlags)0x0040000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, BallMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallMesh_MetaData), NewProp_BallMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_DecalBaseMat = { "DecalBaseMat", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, DecalBaseMat), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DecalBaseMat_MetaData), NewProp_DecalBaseMat_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_RandColor = { "RandColor", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, RandColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RandColor_MetaData), NewProp_RandColor_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_ProjectileMaterial = { "ProjectileMaterial", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, ProjectileMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMaterial_MetaData), NewProp_ProjectileMaterial_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_DmiMat = { "DmiMat", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGAM415_ProjectProjectile, DmiMat), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DmiMat_MetaData), NewProp_DmiMat_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_CollisionComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_ProjectileMovement,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_BallMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_DecalBaseMat,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_RandColor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_ProjectileMaterial,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::NewProp_DmiMat,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AGAM415_ProjectProjectile_Statics::DependentSingletons[])() = {
@@ -205,10 +274,10 @@ AGAM415_ProjectProjectile::~AGAM415_ProjectProjectile() {}
 struct Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectProjectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGAM415_ProjectProjectile, AGAM415_ProjectProjectile::StaticClass, TEXT("AGAM415_ProjectProjectile"), &Z_Registration_Info_UClass_AGAM415_ProjectProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGAM415_ProjectProjectile), 1000454481U) },
+		{ Z_Construct_UClass_AGAM415_ProjectProjectile, AGAM415_ProjectProjectile::StaticClass, TEXT("AGAM415_ProjectProjectile"), &Z_Registration_Info_UClass_AGAM415_ProjectProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGAM415_ProjectProjectile), 995291219U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectProjectile_h_3551766177(TEXT("/Script/GAM415_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectProjectile_h_253658240(TEXT("/Script/GAM415_Project"),
 	Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectProjectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

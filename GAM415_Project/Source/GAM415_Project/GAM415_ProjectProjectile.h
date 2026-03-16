@@ -22,8 +22,35 @@ class AGAM415_ProjectProjectile : public AActor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 	UProjectileMovementComponent* ProjectileMovement;
 
+	//static Mesh
+	UPROPERTY(EditAnywhere, Category = "Projectile")
+	UStaticMeshComponent* BallMesh;
+
+	// Decal to be spawned during on hit
+	UPROPERTY(EditAnywhere, Category = "Projectile")
+	UMaterial* DecalBaseMat;
+
+	//RGBA color variable for random color value storage called RandColor
+	UPROPERTY()
+	FLinearColor RandColor;
+
+	//the material set to the ball by defualt
+	UPROPERTY(EditAnywhere, Category = "Projectile")
+	UMaterialInterface* ProjectileMaterial;
+
+	//dynamic mesh to be set at spawn
+	UPROPERTY()
+	UMaterialInstanceDynamic* DmiMat;
+
+
 public:
 	AGAM415_ProjectProjectile();
+
+private:
+	//declared to allow for at spawn setting of RandColor
+	virtual void BeginPlay() override;
+
+public:
 
 	/** called when projectile hits something */
 	UFUNCTION()
@@ -33,5 +60,8 @@ public:
 	USphereComponent* GetCollisionComp() const { return CollisionComp; }
 	/** Returns ProjectileMovement subobject **/
 	UProjectileMovementComponent* GetProjectileMovement() const { return ProjectileMovement; }
+
+	
+	
 };
 
