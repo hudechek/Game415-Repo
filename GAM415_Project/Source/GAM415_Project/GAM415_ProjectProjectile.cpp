@@ -6,6 +6,8 @@
 #include "Components/DecalComponent.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 
 AGAM415_ProjectProjectile::AGAM415_ProjectProjectile() 
 {
@@ -66,6 +68,17 @@ void AGAM415_ProjectProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* Othe
 
 	if (OtherActor != nullptr)
 	{
+		//check if colorP is set if not do nothing
+		if (colorP)
+		{
+			//create UNiagaraComponent called particle comp set it to spawnsystemattched at HitComp. then set linear color to RandColor to user linked value in niagara system destroy the ball mesh and set the collision to NoCollision
+			UNiagaraComponent* particleComp = UNiagaraFunctionLibrary::SpawnSystemAttached(colorP, HitComp, NAME_None, FVector(-20.f, 0.f, 0.f), FRotator(0.f), EAttachLocation::KeepRelativeOffset, true);
+			particleComp->SetNiagaraVariableLinearColor(FString("RandomColor"),RandColor);
+			BallMesh->DestroyComponent();
+			CollisionComp->BodyInstance.SetCollisionProfileName("NoCollision");
+			
+		}
+		
 		//set a float variable to a random number between 0 and 3 for our subframe 
 		float FrameNumber = UKismetMathLibrary::RandomFloatInRange(0, 3.0f);
 

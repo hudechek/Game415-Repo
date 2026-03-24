@@ -21,6 +21,7 @@ ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 GAM415_PROJECT_API UClass* Z_Construct_UClass_ACC_DMI_Cube();
 GAM415_PROJECT_API UClass* Z_Construct_UClass_ACC_DMI_Cube_NoRegister();
+NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_GAM415_Project();
 // End Cross Module References
 
@@ -143,11 +144,16 @@ struct Z_Construct_UClass_ACC_DMI_Cube_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DmiMat_MetaData[] = {
 		{ "ModuleRelativePath", "CC_DMI_Cube.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_colorP_MetaData[] = {
+		{ "Category", "CC_DMI_Cube" },
+		{ "ModuleRelativePath", "CC_DMI_Cube.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CubeMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CubeMaterial;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DmiMat;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_colorP;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -163,11 +169,13 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_DMI_Cube_S
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_CubeMesh = { "CubeMesh", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_DMI_Cube, CubeMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CubeMesh_MetaData), NewProp_CubeMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_CubeMaterial = { "CubeMaterial", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_DMI_Cube, CubeMaterial), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CubeMaterial_MetaData), NewProp_CubeMaterial_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_DmiMat = { "DmiMat", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_DMI_Cube, DmiMat), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DmiMat_MetaData), NewProp_DmiMat_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_colorP = { "colorP", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_DMI_Cube, colorP), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_colorP_MetaData), NewProp_colorP_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_DMI_Cube_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_BoxComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_CubeMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_CubeMaterial,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_DmiMat,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_DMI_Cube_Statics::NewProp_colorP,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_DMI_Cube_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_DMI_Cube_Statics::DependentSingletons[])() = {
@@ -210,10 +218,10 @@ ACC_DMI_Cube::~ACC_DMI_Cube() {}
 struct Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_CC_DMI_Cube_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_DMI_Cube, ACC_DMI_Cube::StaticClass, TEXT("ACC_DMI_Cube"), &Z_Registration_Info_UClass_ACC_DMI_Cube, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_DMI_Cube), 562021019U) },
+		{ Z_Construct_UClass_ACC_DMI_Cube, ACC_DMI_Cube::StaticClass, TEXT("ACC_DMI_Cube"), &Z_Registration_Info_UClass_ACC_DMI_Cube, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_DMI_Cube), 2789538850U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_CC_DMI_Cube_h_4061768861(TEXT("/Script/GAM415_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_CC_DMI_Cube_h_3100390977(TEXT("/Script/GAM415_Project"),
 	Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_CC_DMI_Cube_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_CC_DMI_Cube_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

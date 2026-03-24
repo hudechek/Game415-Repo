@@ -8,6 +8,7 @@
 
 class USphereComponent;
 class UProjectileMovementComponent;
+class UNiagaraSystem;
 
 UCLASS(config=Game)
 class AGAM415_ProjectProjectile : public AActor
@@ -41,6 +42,10 @@ class AGAM415_ProjectProjectile : public AActor
 	//dynamic mesh to be set at spawn
 	UPROPERTY()
 	UMaterialInstanceDynamic* DmiMat;
+
+	// create colorP of type NiagaraSystem to store linear color values to be used by system
+	UPROPERTY(EditAnywhere, Category = "Partical")
+	UNiagaraSystem* colorP;
 
 
 public:

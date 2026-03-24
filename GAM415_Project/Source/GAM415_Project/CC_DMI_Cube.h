@@ -7,6 +7,8 @@
 #include "Components/BoxComponent.h"
 #include "CC_DMI_Cube.generated.h"
 
+class UNiagaraSystem;
+
 UCLASS()
 class GAM415_PROJECT_API ACC_DMI_Cube : public AActor
 {
@@ -35,6 +37,9 @@ public:
 
 	UPROPERTY()
 	UMaterialInstanceDynamic* DmiMat;
+	
+	UPROPERTY(EditAnywhere)
+	UNiagaraSystem* colorP;
 
 	UFUNCTION()
 	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

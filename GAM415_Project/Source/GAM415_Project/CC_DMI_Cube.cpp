@@ -3,7 +3,12 @@
 
 #include "CC_DMI_Cube.h"
 #include "GAM415_Project/GAM415_ProjectCharacter.h"
+#include "Components/BoxComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
+
+class UNiagaraSystem;
 
 // Sets default values
 ACC_DMI_Cube::ACC_DMI_Cube()
@@ -56,12 +61,19 @@ void ACC_DMI_Cube::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 		float randomNumZ = UKismetMathLibrary::RandomFloatInRange(0, 1);
 		float RandomOpacity = UKismetMathLibrary::RandomFloatInRange(0, 1);
 
-		FVector4 RandomColor = FVector4(randomNumX, randomNumY, randomNumZ, 1);
+		FLinearColor RandomColor = FLinearColor(randomNumX, randomNumY, randomNumZ, 1);
 		if (DmiMat)
 		{
 			DmiMat->SetVectorParameterValue("Color", RandomColor);
 			DmiMat->SetScalarParameterValue("Darkness", randomNumX);
 			DmiMat->SetScalarParameterValue("Opacity", RandomOpacity);
+
+			if (colorP)
+			{
+			UNiagaraComponent* particleComp = UNiagaraFunctionLibrary::SpawnSystemAttached(colorP, OtherComp, NAME_None, FVector(0.f), FRotator(0.f), EAttachLocation::KeepRelativeOffset, true);
+
+			particleComp->SetNiagaraVariableLinearColor(FString("RandColor"), RandomColor);
+			}
 		}
 		
 	}
