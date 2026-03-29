@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\school\\game415-repo\\gam415_project\\source\\gam415_project\\proceduralfromstatic.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\x64\\gam415_projecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gam415_project\\definitions.gam415_project.h",
+            "d:\\school\\game415-repo\\gam415_project\\source\\gam415_project\\proceduralfromstatic.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\runtime\\proceduralmeshcomponent\\source\\proceduralmeshcomponent\\public\\proceduralmeshcomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\runtime\\proceduralmeshcomponent\\intermediate\\build\\win64\\unrealeditor\\inc\\proceduralmeshcomponent\\uht\\proceduralmeshcomponent.generated.h",
+            "d:\\school\\game415-repo\\gam415_project\\intermediate\\build\\win64\\unrealeditor\\inc\\gam415_project\\uht\\proceduralfromstatic.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\runtime\\proceduralmeshcomponent\\source\\proceduralmeshcomponent\\public\\kismetproceduralmeshlibrary.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\runtime\\proceduralmeshcomponent\\intermediate\\build\\win64\\unrealeditor\\inc\\proceduralmeshcomponent\\uht\\kismetproceduralmeshlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\viewportinteraction\\public\\viewportinteractiontypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\viewportinteraction\\uht\\viewportinteractiontypes.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

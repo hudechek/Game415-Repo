@@ -11,6 +11,7 @@
     <None Include="..\..\Source\GAM415_ProjectEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -32,6 +33,12 @@
     <Filter Include="Source\GAM415_Project">
       <UniqueIdentifier>{5B569EEA-C759-36CD-AFB2-17013F3A312C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GAM415_Project\CC_DMI_Cube.cpp">
+      <Filter>Source\GAM415_Project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GAM415_Project\CC_DMI_Cube.h">
+      <Filter>Source\GAM415_Project</Filter>
+    </ClCompile>
     <None Include="..\..\Source\GAM415_Project\GAM415_Project.Build.cs">
       <Filter>Source\GAM415_Project</Filter>
     </None>

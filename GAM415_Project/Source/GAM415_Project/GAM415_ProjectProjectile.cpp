@@ -7,6 +7,7 @@
 #include "Components/SphereComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "NiagaraFunctionLibrary.h"
+#include "ProceduralTerrain.h"
 #include "NiagaraComponent.h"
 
 AGAM415_ProjectProjectile::AGAM415_ProjectProjectile() 
@@ -89,5 +90,14 @@ void AGAM415_ProjectProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* Othe
 		//set dynamic changes to material parameters for color and frame
 		MatInstance->SetVectorParameterValue("Color", RandColor);
 		MatInstance->SetScalarParameterValue("Frame", FrameNumber);
+
+		//create AProceduralTerrain reference casting to other actor
+		AProceduralTerrain* procTerrain = Cast<AProceduralTerrain>(OtherActor);
+
+		// check if procTerrain is set if it is call alter mesh and pass in the impact point of the projectile
+		if (procTerrain)
+		{
+			procTerrain->AlterMesh(Hit.ImpactPoint);
+		}
 	}
 }
