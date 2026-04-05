@@ -28,7 +28,13 @@ struct Z_Construct_UFunction_AProceduralTerrain_AlterMesh_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//allows us to alter the mesh on hit of projectile object\n" },
+#endif
 		{ "ModuleRelativePath", "ProceduralTerrain.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "allows us to alter the mesh on hit of projectile object" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_impactPoint;
@@ -118,17 +124,35 @@ struct Z_Construct_UClass_AProceduralTerrain_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NoiseScale_MetaData[] = {
 		{ "Category", "ProceduralTerrain" },
 		{ "ClampMin", "0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// scales frequency of the noise\n" },
+#endif
 		{ "ModuleRelativePath", "ProceduralTerrain.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "scales frequency of the noise" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Scale_MetaData[] = {
 		{ "Category", "ProceduralTerrain" },
 		{ "ClampMin", "0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//scales how wide vertices are set\n" },
+#endif
 		{ "ModuleRelativePath", "ProceduralTerrain.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "scales how wide vertices are set" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UVScale_MetaData[] = {
 		{ "Category", "ProceduralTerrain" },
 		{ "ClampMin", "0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//changes the scale of the UV\n" },
+#endif
 		{ "ModuleRelativePath", "ProceduralTerrain.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "changes the scale of the UV" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Radius_MetaData[] = {
 		{ "Category", "ProceduralTerrain" },
@@ -173,7 +197,7 @@ struct Z_Construct_UClass_AProceduralTerrain_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AProceduralTerrain_AlterMesh, "AlterMesh" }, // 726060683
+		{ &Z_Construct_UFunction_AProceduralTerrain_AlterMesh, "AlterMesh" }, // 1045312728
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -244,10 +268,10 @@ AProceduralTerrain::~AProceduralTerrain() {}
 struct Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_ProceduralTerrain_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProceduralTerrain, AProceduralTerrain::StaticClass, TEXT("AProceduralTerrain"), &Z_Registration_Info_UClass_AProceduralTerrain, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProceduralTerrain), 611817833U) },
+		{ Z_Construct_UClass_AProceduralTerrain, AProceduralTerrain::StaticClass, TEXT("AProceduralTerrain"), &Z_Registration_Info_UClass_AProceduralTerrain, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProceduralTerrain), 2693727675U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_ProceduralTerrain_h_537626276(TEXT("/Script/GAM415_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_ProceduralTerrain_h_423957987(TEXT("/Script/GAM415_Project"),
 	Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_ProceduralTerrain_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_ProceduralTerrain_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

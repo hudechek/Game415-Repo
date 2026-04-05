@@ -34,6 +34,7 @@ AGAM415_ProjectCharacter::AGAM415_ProjectCharacter()
 	Mesh1P->bCastDynamicShadow = false;
 	Mesh1P->CastShadow = false;
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
+	
 
 }
 

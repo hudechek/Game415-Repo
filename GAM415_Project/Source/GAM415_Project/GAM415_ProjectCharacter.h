@@ -12,7 +12,9 @@ class USkeletalMeshComponent;
 class UCameraComponent;
 class UInputAction;
 class UInputMappingContext;
+
 struct FInputActionValue;
+
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
@@ -20,6 +22,13 @@ UCLASS(config=Game)
 class AGAM415_ProjectCharacter : public ACharacter
 {
 	GENERATED_BODY()
+	
+public:
+	AGAM415_ProjectCharacter();
+
+	//Is PlayerTeleporting or not
+	UPROPERTY()
+	bool IsTeleporting;
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
@@ -44,9 +53,6 @@ class AGAM415_ProjectCharacter : public ACharacter
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
-	
-public:
-	AGAM415_ProjectCharacter();
 
 protected:
 	/** Called for movement input */
@@ -66,6 +72,9 @@ public:
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+	
+
+	
 
 };
 

@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GAM415_PROJECT_GAM415_ProjectCharacter_generated_h
 
-#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGAM415_ProjectCharacter(); \
 	friend struct Z_Construct_UClass_AGAM415_ProjectCharacter_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AGAM415_ProjectCharacter)
 
 
-#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AGAM415_ProjectCharacter(AGAM415_ProjectCharacter&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~AGAM415_ProjectCharacter();
 
 
-#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_19_PROLOG
-#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_22_GENERATED_BODY \
+#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_21_PROLOG
+#define FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_22_INCLASS_NO_PURE_DECLS \
-	FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_22_ENHANCED_CONSTRUCTORS \
+	FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	FID_GAM415_Project_Source_GAM415_Project_GAM415_ProjectCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
