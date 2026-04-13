@@ -1,10 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Components/SceneCaptureComponent2D.h"
 #include "CPP_SceneCapture.h"
+
+#include "GAM415_ProjectCharacter.h"
+#include "Components/SceneCaptureComponent2D.h"
 #include "Kismet/KismetRenderingLibrary.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "Engine/TextureRenderTarget2D.h"
+#include "Kismet/KismetMathLibrary.h"
+
 
 // Sets default values
 ACPP_SceneCapture::ACPP_SceneCapture()
@@ -50,6 +54,8 @@ void ACPP_SceneCapture::PostInitializeComponents()
 
 void ACPP_SceneCapture::UpdateSceneCap()
 {
+
+	
 	UTextureRenderTarget2D* NewSceneCap = UKismetRenderingLibrary::CreateRenderTarget2D(this, 1024,1024);
 
 	CaptureComponent->TextureTarget = NewSceneCap;
@@ -62,12 +68,12 @@ void ACPP_SceneCapture::UpdateSceneCap()
 
 }
 
+
 // Called every frame
 void ACPP_SceneCapture::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 	UpdateSceneCap();
-
 }
 

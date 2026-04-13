@@ -41,7 +41,13 @@ struct Z_Construct_UFunction_APortals_OnOverlapBegin_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//function for when portal is overlapped\n" },
+#endif
 		{ "ModuleRelativePath", "Portals.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "function for when portal is overlapped" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedActor_MetaData[] = {
 		{ "EditInline", "true" },
@@ -117,7 +123,13 @@ struct Z_Construct_UFunction_APortals_SetBool_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//function to set player ISTeleporting bool\n" },
+#endif
 		{ "ModuleRelativePath", "Portals.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "function to set player ISTeleporting bool" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Player;
@@ -155,7 +167,13 @@ struct Z_Construct_UFunction_APortals_UpdatePortals_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//function declaration for updating the render of portals\n" },
+#endif
 		{ "ModuleRelativePath", "Portals.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "function declaration for updating the render of portals" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -237,12 +255,12 @@ struct Z_Construct_UClass_APortals_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxComponent_MetaData[] = {
 		{ "Category", "Portals" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//box componant\n" },
+		{ "Comment", "//box component\n" },
 #endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Portals.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "box componant" },
+		{ "ToolTip", "box component" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OtherPortal_MetaData[] = {
@@ -287,9 +305,9 @@ struct Z_Construct_UClass_APortals_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_APortals_OnOverlapBegin, "OnOverlapBegin" }, // 1821797223
-		{ &Z_Construct_UFunction_APortals_SetBool, "SetBool" }, // 2185393301
-		{ &Z_Construct_UFunction_APortals_UpdatePortals, "UpdatePortals" }, // 2434620526
+		{ &Z_Construct_UFunction_APortals_OnOverlapBegin, "OnOverlapBegin" }, // 3174177708
+		{ &Z_Construct_UFunction_APortals_SetBool, "SetBool" }, // 492843265
+		{ &Z_Construct_UFunction_APortals_UpdatePortals, "UpdatePortals" }, // 2357074546
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -354,10 +372,10 @@ APortals::~APortals() {}
 struct Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_Portals_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APortals, APortals::StaticClass, TEXT("APortals"), &Z_Registration_Info_UClass_APortals, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APortals), 3474268187U) },
+		{ Z_Construct_UClass_APortals, APortals::StaticClass, TEXT("APortals"), &Z_Registration_Info_UClass_APortals, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APortals), 1791067648U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_Portals_h_992440717(TEXT("/Script/GAM415_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_Portals_h_629371391(TEXT("/Script/GAM415_Project"),
 	Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_Portals_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GAM415_Project_Source_GAM415_Project_Portals_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -70,15 +70,16 @@ inline void APortals::OnOverlapBegin(UPrimitiveComponent* OverlappedActor, AActo
 				//set player IsTeleporting to true 
 				Player->IsTeleporting = true;
 				//Get OtherPortal Location and store it in Location
-				FVector Location = OtherPortal->GetActorLocation();
+				FVector Location = OtherPortal->BoxComponent->GetComponentLocation();
 				//Set Players location to stored Location
 				Player->SetActorLocation(Location);
+				Player->SetActorRotation(OtherPortal->BoxComponent->GetComponentRotation());
 
 				//set a timer up
 				FTimerHandle TimerHandle;
 				//set up a delegate to be called when the timer runs out
 				FTimerDelegate TimerDelegate;
-				//bind delegate function of SetBool to be called by the Delgate
+				//bind delegate function of SetBool to be called by the Delegate
 				TimerDelegate.BindUFunction(this, "SetBool", Player);
 				//Set up timer parameters
 				GetWorld()->GetTimerManager().SetTimer(TimerHandle, TimerDelegate, 1, false);
@@ -93,6 +94,7 @@ void APortals::SetBool(AGAM415_ProjectCharacter* Player)
 	//if player is valid set is teleporting to false
 	if (Player)
 	{
+		//set player IsTeleporting to false
 		Player->IsTeleporting = false;
 	}
 }

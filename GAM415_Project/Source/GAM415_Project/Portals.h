@@ -10,7 +10,7 @@
 #include "Components/BoxComponent.h"
 #include "Portals.generated.h"
 
-//Forward Declerations
+//Forward Declarations
 class AGAM415_ProjectCharacter;
 
 

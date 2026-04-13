@@ -10,6 +10,7 @@
 
 
 class USceneCaptureComponent;
+class AGAM415_ProjectCharacter;
 
 UCLASS()
 class GAM415_PROJECT_API ACPP_SceneCapture : public AActor
@@ -38,6 +39,7 @@ protected:
 	virtual void PostInitializeComponents() override;
 
 	void UpdateSceneCap();
+
 
 public:	
 	// Called every frame

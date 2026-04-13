@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GAM415_PROJECT_CPP_SceneCapture_generated_h
 
-#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACPP_SceneCapture(); \
 	friend struct Z_Construct_UClass_ACPP_SceneCapture_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ACPP_SceneCapture)
 
 
-#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACPP_SceneCapture(ACPP_SceneCapture&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ACPP_SceneCapture();
 
 
-#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_14_PROLOG
-#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_17_GENERATED_BODY \
+#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_15_PROLOG
+#define FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_17_INCLASS_NO_PURE_DECLS \
-	FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_17_ENHANCED_CONSTRUCTORS \
+	FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_18_INCLASS_NO_PURE_DECLS \
+	FID_GAM415_Project_Source_GAM415_Project_CPP_SceneCapture_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
